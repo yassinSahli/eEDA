@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "ef40b3c6429ef831",
+    "type": "split",
+    "children": [
+      {
+        "id": "3db632f839b6c890",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fcc6e90b4f771afb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "III. Labs/Lab 2 Active Directory Hardening.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lab 2 Active Directory Hardening"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "22b62914d1b12dff",
+    "type": "split",
+    "children": [
+      {
+        "id": "353c1f8ec1f3f5b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "107325d24ab7e411",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7b017ee17635a8d0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "50a3a3308a530671",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 372.5
+  },
+  "right": {
+    "id": "84c7705e2c467136",
+    "type": "split",
+    "children": [
+      {
+        "id": "f0143ade8f9bbcc3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9d74ed2ef023b778",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "III. Labs/Lab 1 Windows Server Hardening.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Lab 1 Windows Server Hardening"
+            }
+          },
+          {
+            "id": "0bd8d956367fb05a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "III. Labs/Lab 1 Windows Server Hardening.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Lab 1 Windows Server Hardening"
+            }
+          },
+          {
+            "id": "853d9b33759ba709",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "466685da6d609ad9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1dd21ff3291f1560",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "III. Labs/Lab 1 Windows Server Hardening.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Lab 1 Windows Server Hardening"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "fcc6e90b4f771afb",
+  "lastOpenFiles": [
+    "III. Labs/Lab 1 Windows Server Hardening.md",
+    "II. Theoretical/7. Security Engineering for Business Operations.md",
+    "III. Labs/Lab 8 Traffic Analysis with Wireshark.md",
+    "III. Labs/Lab 5 IAM with Active Directory.md",
+    "III. Labs/Lab 4 SIEM Splunk Enterprise in Action.md",
+    "III. Labs/Lab 3 Linux Server Hardening.md",
+    "III. Labs/Lab 2 Active Directory Hardening.md",
+    "I. General Presentation/General Presentation.md",
+    "I. General Presentation/Domain & Objectives.png",
+    "II. Theoretical/1. Cyber Security Hardening.md",
+    "II. Theoretical/2. Identity & Access Management (IAM).md",
+    "II. Theoretical/3. Security Engineering and Change Management.md",
+    "II. Theoretical/4. Security Sensors & Logging.md",
+    "II. Theoretical/5. Vulnerability Management.md",
+    "II. Theoretical/6. Secure Architecture Design.md"
+  ]
+}
