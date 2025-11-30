@@ -66,7 +66,7 @@ Repeat this process for: - _AllJoyn Router (UDP-In)_ - **ALL** _Cast To Device_ 
 
 Perform the same steps as above to disable the following outbound rules: - _AllJoyn Router (TCP-Out)_ and _AllJoyn Router (UDP-Out)_ - **ALL** _Cast to Device_ rules
 
-![[Pasted image 20251027113309.png]]
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3474/10.png)
 
 **Step 5 - Disable unnecessary services:** Close Windows Defender Firewall window and open _Services_
 

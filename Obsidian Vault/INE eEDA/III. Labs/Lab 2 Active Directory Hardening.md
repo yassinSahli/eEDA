@@ -22,16 +22,17 @@ The server team is beginning to build the first Active Directory structure for t
 # Workload
 
 **Step 1 - Check Jane's permissions:** 
-Open Active Directory Administrative Center and browse to the _Lab Users_ OU.
-![[Pasted image 20251027144253.png]]
+**Step 1 - Check Jane's permissions:** Open _Active Directory Administrative Center_ and browse to the _Lab Users_ OU.
 
-![[Pasted image 20251027144304.png]]
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/1.png)
 
 Right click on **Jane Doe** to open the properties for the account, then choose _Extensions_ on the left, and then the _Security_ tab.
-![[Pasted image 20251027144527.png]]
 
-Scroll until you see specific permissions for **Jane Doe (janedoe@lab.ine.local)** in the _Principal_ column.
-![[Pasted image 20251027144744.png]]
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/2.png)
+
+Click the _Advanced_ button under the permissions and scroll until you see specific permissions for **Jane Doe (janedoe@lab.ine.local)** in the _Principal_ column.
+
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/3.png)
 
 Looking at these permissions, we see that Jane has Full control to the **Lab Users** OU, even though she is not an administrator.
 
@@ -48,7 +49,8 @@ With that dialog box open, choose the _Security_ tab near the bottom of the wind
 ![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/6.png)
 
 Locate the entries that list Jane Doe as the Principal and remove each of them by clicking on the individual line and then clicking _Remove_.
-![[Pasted image 20251027145017.png]]
+
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/7.png)
 
 When all 4 entries have been removed, click _OK_ and then close the properties box for the Lab Users OU.
 
@@ -63,7 +65,9 @@ Expand the navigation on the left hand side -> _Forest: lab.ine.local_ -> _Domai
 To reach the password settings, in the new _Group Policy Management Editor_ window that opens, expand the navigation as follows:
 
 _Computer Configuration_ -> _Policies_ -> _Windows Settings_ -> _Security Settings_ -> _Account Policies_. Then click on **Password Policies** where you will see the policies appear in the main window.
-![[Pasted image 20251027145456.png]]
+
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/10.png)
+
 Set each of the following policy settings by double clicking on the policy, setting it appropriately, and clicking _OK_: - **Enforce password history**: **5** passwords remembered
 
 ![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/11.png)
@@ -102,10 +106,11 @@ The other two settings will be set appropriately automatically, based on the sug
 
 **Step 4 - Configure PowerShell script execution policy**
 
-Still in the Group Policy Management Editor, browse to **Computer Configuration -> Policies ->_Administrative Templates_ -> _Windows Components_ -> _Windows PowerShell** in the left hand navigation.
+Still in the Group Policy Management Editor, browse to _Computer Configuration_ -> _Administrative Templates_ -> _Windows Components_ -> _Windows PowerShell_ in the left hand navigation.
 
-![[Pasted image 20251027150022.png]]
-![[Pasted image 20251027150136.png]]
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/19.png)
+
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/20.png)
 
 Double click **Turn on Script Execution** to open it's properties and set it to **Disabled**. Click _OK_.
 
@@ -122,7 +127,8 @@ Double click on **Turn on PowerShell Script Block Logging** and set it to **Enab
 **Step 6 - Block PowerShell application for all users except the _inelabadmin_ user**
 
 Open _Active Directory Administrative Center_ and browse to the _Lab Users_ OU. Right click in the blank area of the main window and select **New** and then **Group.**
-![[Pasted image 20251027151135.png]]
+
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/23.png)
 
 Enter **allow-powershell** for the _Group Name_. The _Group (SamAccountName)_ field will automatically populate.
 
@@ -149,9 +155,6 @@ Forest: lab.ine.local
       └── lab.ine.local
           └── Group Policy Objects
 
-![[Pasted image 20251027151811.png]]
-
-
 ![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/28.png)
 
 Right click on the newly created policy and choose _Edit..._
@@ -165,27 +168,28 @@ In the new Group Policy Management Editor window that appears, navigate to **Use
 Right click on _Software Restriction Policies_ and select _New Software Restriction Policies_
 
 In the main section of the window, double-click on **Additional Rules**, then right click in the blank area of that section and select _New Path Rule..._
-![[Pasted image 20251027152125.png]]
+
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/31.png)
 
 Enter **%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe** in the _Path_ field. Select **Disallowed** for the _Security level_, and click _OK_.
-![[Pasted image 20251027152552.png]]
-![[Pasted image 20251027152642.png]]
+
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/32.png)
+
 Close the _Group Policy Management Editor_ window and return to the _Group Policy Management_ window. (Yes, those two can be confusing).
 
 Select your newly edited **Block Powershell** policy and go to the **Delegation** tab. Click on **Add...** at the bottom of the window.
 
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/33.png)
+
 Enter **allow-powershell** (the name of the group we previously created) into the dialog box and click on _Check Names_. Once the name is underlined, click _OK_ to save. If you receive an error or other dialog box, check the spelling of the group name.
 
-![[Pasted image 20251027152957.png]]
+![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/34.png)
 
-Click _OK_ on the **Add Group User dialog** that appears to accept the default settings, then click on _Advanced..._ on the bottom right.
+Click _OK_ on the _Add Group or User_ dialog that appears to accept the default settings, then click on _Advanced..._ on the bottom right..
 
 ![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/35.png)
 
-Go to **Advanced
-![[Pasted image 20251028151745.png]]
-
-
+In the _Block Powershell Security Settings_ dialog box, choose the **allow-powershell** group in the top section. In the bottom section, scroll down and check **Deny** for the **Apply Group Policy** option.
 ![Content Image](https://assets.ine.com/content/ptp/BrianOlliff/VOD-4467/LAB-3475/36.png)
 
 Click **Yes** on the warning dialog that appears.
